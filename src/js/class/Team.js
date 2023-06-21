@@ -32,14 +32,13 @@ let swordman = new Swordsman('Arktur');
 let bowman = new Bowman('Sanek')
 
 //добавление 
-team.add(swordman);
-console.log(team.members)
-
-// team.addAll(swordman, bowman);
+// team.add(swordman);
 // console.log(team.members)
+team.addAll(swordman, bowman);
+// console.log(team.members.entries())
 
-// team.toArray();
-// console.log(team.toArray())
+let arr = team.toArray();
+console.log(arr)
 
 //////////////////////////////////////////////////
 // let members = new Set();
