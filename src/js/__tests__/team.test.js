@@ -28,11 +28,11 @@ test('Персонаж добавляется в команду', () => {
 test('Персонаж существующий в команде не добавляется', () => {
 	team.add(swordman);
 
-	function result() {
-		throw new Error('Данный персонаж уже добавлен в команду')
+	let result = function result() {
+		new Error('Данный персонаж уже добавлен в команду')
 	};
 
-	expect(result).toThrowError(new Error('Данный персонаж уже добавлен в команду'))
+	expect(result).toThrow(new Error('Данный персонаж уже добавлен в команду'))
 	
 })
 
