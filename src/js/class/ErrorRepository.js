@@ -7,13 +7,9 @@ export default class ErrorRepository {
 
 	translate(code) {
 		if (this.errorAray.has(code)) {
-			throw new Error(`${this.errorAray.get(code)}`)
+			throw `${this.errorAray.get(code)}`
 		} else {
 			throw new Error('Неизвестная ошибка')
 		}
 	} 
-
 }
-// let er = new ErrorRepository();
-
-// er.translate(12)
